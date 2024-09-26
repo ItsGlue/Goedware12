@@ -56,5 +56,13 @@
         "temp/": true,
         "Temp/": true
     },
+<<<<<<< Updated upstream
     "dotnet.defaultSolution": "Goedware12.sln"
+=======
+<<<<<<< HEAD
+    "dotnet.defaultSolution": "Goedware12.sln"
+=======
+    "dotnet.defaultSolution": "Goedware12Repo.sln"
+>>>>>>> 55126f9c15edb6c92330d8cff9d7fe00f1fd1b47
+>>>>>>> Stashed changes
 }
