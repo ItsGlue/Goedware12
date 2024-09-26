@@ -1,16 +1,11 @@
-/*using System.Collections.Generic;
-using System.Data.Common;
-using TMPro;
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControlV2 : MonoBehaviour
 {
-    public Vector2 playerInput;
-    Rigidbody2D rb;
-    public float moveSpeed;
+    [SerializeField] private Rigidbody2D rb;
+    public float moveSpeed = 10;
     public float inputHorizontal;
     public bool facingRight = true;
     public bool isFlipped = true;
@@ -18,13 +13,10 @@ public class PlayerController : MonoBehaviour
     public float score;
     public float maxHealth;
     public float currHealth;
-    //public GameObject Player;
-
+    public Vector2 playerInput;
     public bool isDead = false;
     private float damageCooldown = 1.0f; 
     private float nextDamageTime = 0.0f; 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,10 +46,9 @@ public class PlayerController : MonoBehaviour
             die();
         }
     }
-
     void die() {
         isDead = true;
-        Destroy(Player);
+     // Code this later   Destroy(Player);
     }
     void flip() {
         Vector3 currentScale = gameObject.transform.localScale;
@@ -74,4 +65,4 @@ public class PlayerController : MonoBehaviour
             nextDamageTime = Time.time + damageCooldown;
         }
     }
-}*/
+}
