@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 933313006}
   - component: {fileID: 933313005}
   - component: {fileID: 933313004}
-  - component: {fileID: 933313007}
   - component: {fileID: 933313008}
   m_Layer: 0
   m_Name: Player
@@ -327,29 +326,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &933313007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933313001}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db5c80d94d93f94f8798d7e47484273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 933313004}
-  moveSpeed: 1000
-  inputHorizontal: 0
-  facingRight: 1
-  isFlipped: 1
-  orientation: 1
-  score: 0
-  maxHealth: 0
-  currHealth: 0
-  playerInput: {x: 0, y: 0}
-  isDead: 0
 --- !u!114 &933313008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,17 +338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cf212afbbe74497b11aee7bd8874d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {x: 0, y: 0}
-  moveSpeed: 5
-  inputHorizontal: 0
-  facingRight: 1
-  isFlipped: 1
-  orientation: 1
-  score: 0
-  maxHealth: 100
-  currHealth: 100
-  Player: {fileID: 933313001}
-  isDead: 0
+  speed: 5
+  rb: {fileID: 933313004}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
