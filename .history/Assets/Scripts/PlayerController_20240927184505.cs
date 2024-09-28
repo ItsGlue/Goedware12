@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 5f; // Movement speed
 
     private Vector2 movement;
 

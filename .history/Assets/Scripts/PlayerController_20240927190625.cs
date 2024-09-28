@@ -11,6 +11,6 @@ public class TopDownMovement : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        transform.Translate(movement * speed * Time.deltaTime);
+        transform.Translate(movement * speed * Time.deltaTime).normalized;
     }
 }
