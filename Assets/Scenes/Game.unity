@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 933313008}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1285001828}
   m_Layer: 0
   m_Name: PlayerObjec
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingSpeed: 2
   maxSwingAngle: 45
+  player: {fileID: 933313001}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

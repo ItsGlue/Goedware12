@@ -8,10 +8,13 @@ public class SwordSwing : MonoBehaviour
     public float maxSwingAngle = 45f;     
     private float currentSwingAngle = 0f; 
     private bool swingingForward = true;  
-    private bool isSwinging = false;     
-
+    private bool isSwinging = false;
+    public GameObject player;
     void Update()
     {
+        Vector2 pos = new Vector2(player.transform.position.x + 0.5f, player.transform.position.y + 0.5f);
+        transform.position = pos;
+
         if (Input.GetMouseButtonDown(0) && !isSwinging)
         {
             isSwinging = true;  
