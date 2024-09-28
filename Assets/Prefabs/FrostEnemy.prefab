@@ -131,7 +131,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   maxHealth: 50
   snowballPrefab: {fileID: 2358301629043836617, guid: beae8364f39ad4848a3fffbb1517371b, type: 3}
-  firePoint: {fileID: 1173899843336602558, guid: eef15c80b6faa442891e98bf58ca4f11, type: 3}
+  firePoint: {fileID: 2527862322912934997}
   shootInterval: 2
   shootForce: 10
 --- !u!61 &4144214735411309924
