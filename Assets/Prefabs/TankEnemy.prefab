@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2527862322912934997}
   - component: {fileID: 3784669391958422414}
-  - component: {fileID: 1063764648077817558}
+  - component: {fileID: 5393195088042699360}
   - component: {fileID: 3427920418410973386}
-  - component: {fileID: 433192678083064524}
+  - component: {fileID: -146863003247284839}
   m_Layer: 0
-  m_Name: SwordEnemy
+  m_Name: TankEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1063764648077817558
+--- !u!114 &5393195088042699360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,14 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 698459236576014050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3589e7ee2920d4659ac8246904daca7c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0441f57d2844d42be77fe95125497f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1173899843336602558, guid: eef15c80b6faa442891e98bf58ca4f11, type: 3}
-  moveSpeed: 2
-  dashSpeed: 7
-  dashDuration: 0.35
-  dashCooldown: 3
+  moveSpeed: 1
+  maxHealth: 100
 --- !u!50 &3427920418410973386
 Rigidbody2D:
   serializedVersion: 4
@@ -133,7 +130,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &433192678083064524
+--- !u!61 &-146863003247284839
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,15 +164,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8828125, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8828125, y: 1}
   m_EdgeRadius: 0
