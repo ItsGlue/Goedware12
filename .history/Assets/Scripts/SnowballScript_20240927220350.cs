@@ -13,9 +13,7 @@ public class SnowballScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Destroy the snowball on collision
-        if (collision.gameObject.CompareTag("Player")) {
-            Destroy(gameObject);
-        }
-        
+        if (collision.
+        Destroy(gameObject);
     }
 }

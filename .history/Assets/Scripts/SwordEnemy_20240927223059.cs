@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    private Transform player; 
     public float moveSpeed = 2f;
     public float dashSpeed = 8f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 3f;
 
-    private Transform player;
     private bool isDashing = false;
     private Vector2 dashDirection;
     private float dashCooldownTimer;
@@ -19,7 +19,6 @@ public class EnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashCooldownTimer = dashCooldown;
-        player = GameObject.FindGameObjectWithTag("Player").transform; // Find player by tag
     }
 
     void Update()
@@ -53,8 +52,13 @@ public class EnemyMovement : MonoBehaviour
     {
         if (player == null) return;
 
+        // Calculate the direction vector towards the player
         Vector2 direction = player.position - transform.position;
+
+        // Calculate the angle from the enemy's current position to the player
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Rotate the enemy to face the player
         rb.rotation = angle;
     }
 
