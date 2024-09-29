@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 433192678083064524}
   m_Layer: 0
   m_Name: SwordEnemy
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3589e7ee2920d4659ac8246904daca7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1173899843336602558, guid: eef15c80b6faa442891e98bf58ca4f11, type: 3}
   moveSpeed: 2
   dashSpeed: 7
   dashDuration: 0.35

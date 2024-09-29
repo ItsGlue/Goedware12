@@ -1,0 +1,78 @@
+using UnityEngine;
+
+public class SwordSwing : MonoBehaviour
+{
+    public Transform player;                // Reference to the player's transform
+    public float swingSpeed = 200f;         // Speed of the swinging motion
+    public float startAngleOffset = 45f;    // Degrees offset from the midpoint (cursor angle)
+    public float endAngleOffset = 45f;      // Degrees offset on the other side of the midpoint
+
+    private SpriteRenderer swordRenderer;   // Reference to the sword's sprite renderer
+    private bool isSwinging = false;        // Whether the sword is currently swinging
+    private float targetAngle;              // Target angle to swing towards
+    private float swingDirection;           // Direction of the swing (1 or -1)
+
+    void Start()
+    {
+        swordRenderer = GetComponent<SpriteRenderer>();
+        swordRenderer.enabled = false;      // Sword starts hidden
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && !isSwinging) // Check for left mouse button click
+        {
+            StartSwing();
+        }
+
+        if (isSwinging)
+        {
+            SwingSword();
+        }
+    }
+
+    private void StartSwing()
+    {
+        // Calculate the midpoint angle based on the player's position and cursor
+        Vector2 directionToCursor = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.position).normalized;
+        float midpointAngle = Mathf.Atan2(directionToCursor.y, directionToCursor.x) * Mathf.Rad2Deg;
+
+        // Determine the start and end angles relative to the midpoint angle
+        float startAngle = midpointAngle - startAngleOffset;
+        float endAngle = midpointAngle + endAngleOffset;
+
+        // Set the initial position of the sword
+        transform.position = player.position;
+        transform.rotation = Quaternion.Euler(0, 0, startAngle);
+
+        // Determine the direction of the swing (clockwise or counterclockwise)
+        swingDirection = Mathf.Sign(endAngle - startAngle);
+        targetAngle = endAngle;
+
+        // Enable the sword and start swinging
+        swordRenderer.enabled = true;
+        isSwinging = true;
+    }
+
+    private void SwingSword()
+    {
+        // Rotate the sword towards the target angle
+        float step = swingSpeed * Time.deltaTime * swingDirection;
+        transform.Rotate(0, 0, step);
+
+        // Check if the sword has reached the target angle
+        float currentAngle = transform.rotation.eulerAngles.z;
+        bool reachedTarget = swingDirection > 0 ? currentAngle >= targetAngle : currentAngle <= targetAngle;
+
+        if (reachedTarget)
+        {
+            EndSwing();
+        }
+    }
+
+    private void EndSwing()
+    {
+        isSwinging = false;
+        swordRenderer.enabled = false; // Hide the sword after the swing
+    }
+}
