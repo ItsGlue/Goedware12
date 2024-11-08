@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Danger
   - PlayerWeapon
+  - SwordEnemy
+  - Enemy
+  - Shield
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
